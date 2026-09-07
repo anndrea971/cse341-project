@@ -1,27 +1,25 @@
-// Optional helper: inserts 3 sample contacts so you don't have to type them
-// into the Atlas UI by hand. Run once locally with: node seed.js
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
 const sampleContacts = [
   {
     firstName: 'Ada',
-    lastName: 'Lovelace',
-    email: 'ada.lovelace@example.com',
+    lastName: 'Gonzalez',
+    email: 'ada.Gonzalez@udd.com',
     favoriteColor: 'Purple',
     birthday: '1815-12-10'
   },
   {
     firstName: 'Grace',
     lastName: 'Hopper',
-    email: 'grace.hopper@example.com',
+    email: 'grace.hopper@udd.com',
     favoriteColor: 'Navy',
     birthday: '1906-12-09'
   },
   {
     firstName: 'Alan',
     lastName: 'Turing',
-    email: 'alan.turing@example.com',
+    email: 'alan.turing@udd.com',
     favoriteColor: 'Green',
     birthday: '1912-06-23'
   }
