@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000
+
+### To test against the deployed API instead, comment the line above
+### and uncomment this one:
+# @baseUrl = https://cse341-project-z1h5.onrender.com
+
+### Get all contacts
+GET {{baseUrl}}/contacts
+
+### Get a single contact by id
+### Replace the id below with a real _id copied from the response above
+GET {{baseUrl}}/contacts/REPLACE_WITH_REAL_ID
+
+### Create a new contact
+POST {{baseUrl}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Alan",
+  "lastName": "Turing",
+  "email": "alan.turing@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1912-06-23"
+}
+
+### Create a new contact with a missing field (should return 400)
+POST {{baseUrl}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Incomplete",
+  "lastName": "Contact"
+}
+
+### Update a contact
+### Replace the id below with a real _id
+PUT {{baseUrl}}/contacts/REPLACE_WITH_REAL_ID
+Content-Type: application/json
+
+{
+  "firstName": "Alan",
+  "lastName": "Turing",
+  "email": "alan.turing@updated.com",
+  "favoriteColor": "Blue",
+  "birthday": "1912-06-23"
+}
+
+### Delete a contact
+### Replace the id below with a real _id
+DELETE {{baseUrl}}/contacts/REPLACE_WITH_REAL_ID
