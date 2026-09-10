@@ -21,6 +21,4 @@ const doc = {
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];
 
-// Regenerate swagger.json by scanning the route files.
-// Run this again any time you add or change a route: node swagger.js
 swaggerAutogen(outputFile, endpointsFiles, doc);
